@@ -2,15 +2,23 @@
 
 import { useState, useEffect } from "react"
 
+function getElements() {
+
+}
+
 export default function Contact() {
-    const [order, setOrder] = useState(0)
 
     return (
-        <section className="flex flex-row">
-            <div className="w-10 h-10 border bg-red-500 border-black order-1">1</div>
-            <div className="w-10 h-10 border bg-green-500 border-black order-2">3</div>
-            <div className="w-10 h-10 border bg-yellow-500 border-black order-3">2</div>
-            <div className="w-10 h-10 border bg-blue-500 border-black order-4">4</div>
+        <section className="h-full grid grid-rows-3 grid-cols-3 border">
+            <div className="custom"><div className="custom-inside">1</div></div>
+            <div className="custom"><div className="custom-inside">2</div></div>
+            <div className="custom"><div className="custom-inside">3</div></div>
+            <div className="custom"><div className="custom-inside">4</div></div>
+            <div className="custom"><div className="custom-inside">5</div></div>
+            <div className="custom"><div className="custom-inside">6</div></div>
+            <div className="custom"><div className="custom-inside">7</div></div>
+            <div className="custom"><div className="custom-inside">8</div></div>
+            <div className="custom"><div className="custom-inside">9</div></div>
         </section>
     )
 }

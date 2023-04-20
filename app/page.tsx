@@ -1,10 +1,11 @@
 import fs from 'fs'
-import path from 'path';
-import Gallery from './components/gallery'
+import path from 'path'
+import Portfolio from './components/portfolio';
+
 
 // Get gallery items from public directory
 function getGalleryItems() {
-  const publicDirectory = './public/gallery-items';
+  const publicDirectory = './public/gallery-items'
   const items = fs.readdirSync(publicDirectory);
   const imageExtensions = ['.jpg', '.jpeg', '.webp', '.png', '.svg', '.tiff', '.bmp', '.ico','.png', '.gif']; // List of supported image file extensions
 
@@ -16,5 +17,7 @@ function getGalleryItems() {
 
 // Render gallery
 export default function Home() {
-  return <Gallery items={getGalleryItems()} />
+
+  return <Portfolio items={getGalleryItems()} />
+
 }
