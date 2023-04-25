@@ -16,20 +16,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-screen">
+      <body className="h-screen grid grid-rows-[auto_1fr_auto] [grid-template-areas:'navbar'_'content'_'footer']">
 
         {/* Navigation Bar */}
-        <nav className="absolute top-0 w-full">
+        <nav className="[grid-area:navbar]">
           <Navbar />
         </nav>
 
         {/* Main Content */}
-        <main className="h-full">
+        <main className="[grid-area:content]">
           {children}
         </main>
 
         {/* Footer */}
-        <footer className="absolute bottom-0 w-full">
+        <footer className="[grid-area:footer]">
           <Footer />
         </footer>
 
