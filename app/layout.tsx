@@ -1,4 +1,5 @@
 import './globals.css'
+
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 
@@ -24,7 +25,7 @@ export default function RootLayout({
         </nav>
 
         {/* Main Content */}
-        <main className="[grid-area:content]">
+        <main className="[grid-area:content] overflow-y-scroll">
           {children}
         </main>
 
