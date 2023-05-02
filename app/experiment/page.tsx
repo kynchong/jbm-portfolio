@@ -1,16 +1,50 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
+
+import { AnimatePresence, motion, Variants } from "framer-motion";
+
+// Parent Variant
+const parentVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      delayChildren: 0.5,
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const childVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -100,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
+const childrenCount = [1, 2, 3, 4, 5, 6, 7];
 
 export default function Contact() {
-    const [order, setOrder] = useState(0)
+  const [order, setOrder] = useState(0);
 
-    return (
-        <section className="flex flex-row">
-            <div className="w-10 h-10 border bg-red-500 border-black order-1">1</div>
-            <div className="w-10 h-10 border bg-green-500 border-black order-2">3</div>
-            <div className="w-10 h-10 border bg-yellow-500 border-black order-3">2</div>
-            <div className="w-10 h-10 border bg-blue-500 border-black order-4">4</div>
-        </section>
-    )
+  return (
+    <motion.div
+      variants={parentVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
+      {childrenCount.map((child, index) => (
+        <AnimatePresence key={index}>
+          <motion.div variants={childVariants}>{child}</motion.div>
+        </AnimatePresence>
+      ))}
+    </motion.div>
+  );
 }
