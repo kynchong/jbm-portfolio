@@ -39,7 +39,7 @@ const cardOverlayVariant: Variants = {
 /* Card component ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————  */
 const cards = imagesCollection.map((image, index) => (
 	// Image and Overlay Container
-	<AnimatePresence mode="sync">
+	<AnimatePresence mode="sync" key={index}>
 		<motion.div
 			key={index}
 			className="absolute top-0 left-0 w-full h-full"
