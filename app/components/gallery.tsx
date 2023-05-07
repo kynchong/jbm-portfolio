@@ -39,36 +39,34 @@ const cardOverlayVariant: Variants = {
 /* Card component ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————  */
 const cards = imagesCollection.map((image, index) => (
 	// Image and Overlay Container
-	<AnimatePresence mode="sync" key={index}>
-		<motion.div
-			key={index}
-			className="absolute top-0 left-0 w-full h-full"
-			initial="rest"
-			animate="entry"
-			exit="rest"
-			whileHover="hover"
-			variants={cardVariant}
-		>
-			{/* Image */}
-			<motion.div variants={cardImageVariant} className="relative w-full h-full">
-				<Image
-					className="object-cover"
-					fill={true}
-					sizes="(max-width: 768px) 50vw, (max-width: 1024px) 30vw, 25vw"
-					src={image.src}
-					alt={`${image.alt}`}
-				/>
-			</motion.div>
-
-			{/* Overlay */}
-			<motion.div
-				className="absolute top-0 left-0 w-full h-full | bg-opacity-70 bg-black text-white | flex justify-center items-center font-black text-3xl"
-				variants={cardOverlayVariant}
-			>
-				{image.alt}
-			</motion.div>
+	<motion.div
+		key={index}
+		className="absolute top-0 left-0 w-full h-full"
+		initial="rest"
+		animate="entry"
+		exit="rest"
+		whileHover="hover"
+		variants={cardVariant}
+	>
+		{/* Image */}
+		<motion.div variants={cardImageVariant} className="relative w-full h-full">
+			<Image
+				className="object-cover"
+				fill={true}
+				sizes="(max-width: 768px) 50vw, (max-width: 1024px) 30vw, 25vw"
+				src={image.src}
+				alt={`${image.alt}`}
+			/>
 		</motion.div>
-	</AnimatePresence>
+
+		{/* Overlay */}
+		<motion.div
+			className="absolute top-0 left-0 w-full h-full | bg-opacity-70 bg-black text-white | flex justify-center items-center font-black text-3xl"
+			variants={cardOverlayVariant}
+		>
+			{image.alt}
+		</motion.div>
+	</motion.div>
 ));
 
 /* Random unique indices ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————  */
@@ -131,7 +129,7 @@ export default function Gallery() {
 					className="relative portrait:w-1/3 portrait:h-1/4 | landscape:w-1/4 landscape:h-1/3 overflow-hidden cursor-pointer | bg-black border border-white"
 				>
 					{/* Iterate featuredCards and display cards  */}
-					{cards[featuredCards[cardIndex]]}
+					<AnimatePresence mode="sync">{cards[featuredCards[cardIndex]]}</AnimatePresence>
 				</motion.div>
 			))}
 		</motion.div>
