@@ -37,182 +37,182 @@ import animatedFour from "../../public/gallery-items/limelite.gif";
 // import imageOne from "";
 
 // type
-export type ImageCollection = {
-  id: number;
-  src: any;
-  alt: string;
-};
+export interface ImageCollection {
+	id: number;
+	src: any;
+	alt: string;
+}
 
 // Store in variable
 export const imagesCollection: Array<ImageCollection> = [
-  {
-    id: 0,
-    src: imageOne,
-    alt: "Image One",
-  },
-  {
-    id: 1,
-    src: imageTwo,
-    alt: "Image Two",
-  },
-  {
-    id: 2,
-    src: imageThree,
-    alt: "Image Three",
-  },
-  {
-    id: 3,
-    src: imageFour,
-    alt: "Image Four",
-  },
-  {
-    id: 4,
-    src: imageFive,
-    alt: "Image Five",
-  },
-  {
-    id: 5,
-    src: imageSix,
-    alt: "Image Six",
-  },
-  {
-    id: 6,
-    src: imageSeven,
-    alt: "Image Seven",
-  },
-  {
-    id: 7,
-    src: imageEight,
-    alt: "Image Eight",
-  },
-  {
-    id: 8,
-    src: imageNine,
-    alt: "Image Nine",
-  },
-  {
-    id: 9,
-    src: imageTen,
-    alt: "Image Ten",
-  },
-  {
-    id: 10,
-    src: imageEleven,
-    alt: "Image Eleven",
-  },
-  {
-    id: 11,
-    src: imageTwelve,
-    alt: "Image Twelve",
-  },
-  {
-    id: 12,
-    src: imageThirteen,
-    alt: "Image Thirteen",
-  },
-  {
-    id: 13,
-    src: imageFourteen,
-    alt: "Image Fourteen",
-  },
-  {
-    id: 14,
-    src: imageFifteen,
-    alt: "Image Fifteen",
-  },
-  {
-    id: 15,
-    src: imageSixteen,
-    alt: "Image Sixteen",
-  },
-  {
-    id: 16,
-    src: imageSeventeen,
-    alt: "Image Seventeen",
-  },
-  {
-    id: 17,
-    src: imageEighteen,
-    alt: "Image Eighteen",
-  },
-  {
-    id: 18,
-    src: imageNineteen,
-    alt: "Image Nineteen",
-  },
-  {
-    id: 19,
-    src: imageTwenty,
-    alt: "Image Twenty",
-  },
-  {
-    id: 20,
-    src: imageTwentyOne,
-    alt: "Image Twenty One",
-  },
-  {
-    id: 21,
-    src: imageTwentyTwo,
-    alt: "Image Twenty Two",
-  },
-  {
-    id: 22,
-    src: imageTwentyThree,
-    alt: "Image Twenty Three",
-  },
-  {
-    id: 23,
-    src: imageTwentyFour,
-    alt: "Image Twenty Four",
-  },
-  {
-    id: 24,
-    src: imageTwentyFive,
-    alt: "Image Twenty Five",
-  },
-  {
-    id: 25,
-    src: imageTwentySix,
-    alt: "Image Twenty Six",
-  },
-  {
-    id: 26,
-    src: imageTwentySeven,
-    alt: "Image Twenty Seven",
-  },
-  {
-    id: 27,
-    src: imageTwentyEight,
-    alt: "Image Twenty Eight",
-  },
-  {
-    id: 28,
-    src: imageTwentyNine,
-    alt: "Image Twenty Nine",
-  },
-  {
-    id: 29,
-    src: imageThirty,
-    alt: "Image Thirty",
-  },
-  {
-    id: 30,
-    src: animatedOne,
-    alt: "Gif One",
-  },
-  {
-    id: 31,
-    src: animatedTwo,
-    alt: "Gif Two",
-  },
-  {
-    id: 32,
-    src: animatedThree,
-    alt: "Gif Three",
-  },
-  {
-    id: 33,
-    src: animatedFour,
-    alt: "Gif Four",
-  },
+	{
+		id: 0,
+		src: imageOne,
+		alt: "Image One",
+	},
+	{
+		id: 1,
+		src: imageTwo,
+		alt: "Image Two",
+	},
+	{
+		id: 2,
+		src: imageThree,
+		alt: "Image Three",
+	},
+	{
+		id: 3,
+		src: imageFour,
+		alt: "Image Four",
+	},
+	{
+		id: 4,
+		src: imageFive,
+		alt: "Image Five",
+	},
+	{
+		id: 5,
+		src: imageSix,
+		alt: "Image Six",
+	},
+	{
+		id: 6,
+		src: imageSeven,
+		alt: "Image Seven",
+	},
+	{
+		id: 7,
+		src: imageEight,
+		alt: "Image Eight",
+	},
+	{
+		id: 8,
+		src: imageNine,
+		alt: "Image Nine",
+	},
+	{
+		id: 9,
+		src: imageTen,
+		alt: "Image Ten",
+	},
+	{
+		id: 10,
+		src: imageEleven,
+		alt: "Image Eleven",
+	},
+	{
+		id: 11,
+		src: imageTwelve,
+		alt: "Image Twelve",
+	},
+	{
+		id: 12,
+		src: imageThirteen,
+		alt: "Image Thirteen",
+	},
+	{
+		id: 13,
+		src: imageFourteen,
+		alt: "Image Fourteen",
+	},
+	{
+		id: 14,
+		src: imageFifteen,
+		alt: "Image Fifteen",
+	},
+	{
+		id: 15,
+		src: imageSixteen,
+		alt: "Image Sixteen",
+	},
+	{
+		id: 16,
+		src: imageSeventeen,
+		alt: "Image Seventeen",
+	},
+	{
+		id: 17,
+		src: imageEighteen,
+		alt: "Image Eighteen",
+	},
+	{
+		id: 18,
+		src: imageNineteen,
+		alt: "Image Nineteen",
+	},
+	{
+		id: 19,
+		src: imageTwenty,
+		alt: "Image Twenty",
+	},
+	{
+		id: 20,
+		src: imageTwentyOne,
+		alt: "Image Twenty One",
+	},
+	{
+		id: 21,
+		src: imageTwentyTwo,
+		alt: "Image Twenty Two",
+	},
+	{
+		id: 22,
+		src: imageTwentyThree,
+		alt: "Image Twenty Three",
+	},
+	{
+		id: 23,
+		src: imageTwentyFour,
+		alt: "Image Twenty Four",
+	},
+	{
+		id: 24,
+		src: imageTwentyFive,
+		alt: "Image Twenty Five",
+	},
+	{
+		id: 25,
+		src: imageTwentySix,
+		alt: "Image Twenty Six",
+	},
+	{
+		id: 26,
+		src: imageTwentySeven,
+		alt: "Image Twenty Seven",
+	},
+	{
+		id: 27,
+		src: imageTwentyEight,
+		alt: "Image Twenty Eight",
+	},
+	{
+		id: 28,
+		src: imageTwentyNine,
+		alt: "Image Twenty Nine",
+	},
+	{
+		id: 29,
+		src: imageThirty,
+		alt: "Image Thirty",
+	},
+	{
+		id: 30,
+		src: animatedOne,
+		alt: "Gif One",
+	},
+	{
+		id: 31,
+		src: animatedTwo,
+		alt: "Gif Two",
+	},
+	{
+		id: 32,
+		src: animatedThree,
+		alt: "Gif Three",
+	},
+	{
+		id: 33,
+		src: animatedFour,
+		alt: "Gif Four",
+	},
 ];

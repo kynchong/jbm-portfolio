@@ -25,7 +25,9 @@ export default function Navbar() {
 		<div className="flex flex-col justify-center items-center">
 			{/* Site Title & Subtitle */}
 			<div className="">
-				<div className={`p-4 md:p-6 xl:p-8 | ${caveat.className} font-black text-center text-5xl xl:text-8xl`}>
+				<div
+					className={`p-4 md:p-6 xl:p-8 | ${caveat.className} font-black text-center text-5xl lg:text-7xl xl:text-8xl`}
+				>
 					<motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
 						Do the write thing
 					</motion.p>
