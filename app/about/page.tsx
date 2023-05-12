@@ -7,9 +7,15 @@ export default function About() {
 		<section className="p-8 | flex flex-row flex-wrap justify-center items-center">
 			{/* Profile image */}
 			<div className="">
-				<Image src={profilePic} alt="Jonathan" className="rounded-lg object-cover" />
+				<Image
+					className="rounded-lg object-cover"
+					sizes="(max-width: 768px) 50vw, 100vw"
+					src={profilePic}
+					alt="Jonathan"
+					placeholder="blur"
+					blurDataURL={profilePic.blurDataURL}
+				/>
 			</div>
-
 			{/* Text Content */}
 			<div className="lg:p-4 flex-grow max-w-2xl w-full">
 				<h1 className="p-4 | font-black text-4xl">About Jonathan</h1>

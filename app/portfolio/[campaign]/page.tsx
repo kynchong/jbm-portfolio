@@ -18,21 +18,23 @@ export default function Campaign({ params, searchParams }: PageProps) {
 	return (
 		<section className="w-full h-full | flex flex-row flex-nowrap">
 			{/* Iterate campaignAssets */}
-			<div className="w-full h-full | flex flex-col justify-start items-end gap-4">
+			<div className="w-full h-full | flex flex-col justify-start items-end">
 				{campaignAssets.map((asset: ImageCollection) => (
-					<Image
-						className="transition-all duration-1000"
-						key={asset.id}
-						src={asset.src}
-						alt={asset.alt}
-						sizes="(max-width: 768px) 50vw, 100vw"
-						placeholder={isAnimated(asset) ? "empty" : "blur"}
-						blurDataURL={asset.src.blurDataURL}
-					/>
+					<div className="h-full | flex flex-col justify-center">
+						<Image
+							className="object-contain h-screen"
+							key={asset.id}
+							src={asset.src}
+							alt={asset.alt}
+							sizes="(max-width: 768px) 50vw, 100vw"
+							placeholder={isAnimated(asset) ? "empty" : "blur"}
+							blurDataURL={asset.src.blurDataURL}
+						/>
+					</div>
 				))}
 			</div>
 			<div className="relative w-full | flex flex-col justify-center items-center">
-				<div className="fixed | w-1/4 h-1/2 | p-8 bg-white bg-opacity-80 rounded">
+				<div className="fixed | w-1/4 h-1/2 | p-8 bg-white bg-opacity-60 rounded">
 					<p>Title: IBM social campaign</p>
 					<p>Writer: JBM</p>
 					<p>Art Director: Some other guy</p>
