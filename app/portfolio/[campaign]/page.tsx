@@ -1,7 +1,6 @@
-import { PageProps } from "@/.next/types/app/layout";
+import { PageProps } from "../../../.next/types/app/layout";
 import getImages, { ImageCollection } from "../../lib/getImages";
 import Image from "next/image";
-import { ReactEventHandler } from "react";
 
 // receives parameters
 export default function Campaign({ params, searchParams }: PageProps) {
