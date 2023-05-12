@@ -20,10 +20,9 @@ export default function Campaign({ params, searchParams }: PageProps) {
 			{/* Iterate campaignAssets */}
 			<div className="w-full h-full | flex flex-col justify-start items-end">
 				{campaignAssets.map((asset: ImageCollection) => (
-					<div className="h-full | flex flex-col justify-center">
+					<div key={asset.id} className="h-screen | flex flex-col justify-center">
 						<Image
-							className="object-contain h-screen"
-							key={asset.id}
+							className="object-contain"
 							src={asset.src}
 							alt={asset.alt}
 							sizes="(max-width: 768px) 50vw, 100vw"
