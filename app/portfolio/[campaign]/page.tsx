@@ -1,6 +1,10 @@
-import { PageProps } from "../../../.next/types/app/layout";
 import getImages, { ImageCollection } from "../../lib/getImages";
 import Image from "next/image";
+
+type PageProps = {
+	params?: any;
+	searchParams?: any;
+};
 
 // receives parameters
 export default function Campaign({ params, searchParams }: PageProps) {
