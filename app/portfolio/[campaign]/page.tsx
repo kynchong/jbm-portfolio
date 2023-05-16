@@ -16,13 +16,13 @@ export default function Campaign({ params, searchParams }: PageProps) {
 	};
 
 	return (
-		<section className="w-full h-full | flex flex-row flex-nowrap">
-			{/* Iterate campaignAssets */}
-			<div className="w-full h-full | flex flex-col justify-start items-end">
+		<section className="w-full h-full | grid grid-cols-5 | overflow-hidden">
+			{/* Left Panel */}
+			<div className="col-span-3 h-full | overflow-y-scroll">
 				{campaignAssets.map((asset: ImageCollection) => (
-					<div key={asset.id} className="h-screen | flex flex-col justify-center">
+					<div key={asset.id} className="w-full h-full | flex flex-col justify-center items-center">
 						<Image
-							className="object-contain"
+							className="w-full h-full p-8 object-contain"
 							src={asset.src}
 							alt={asset.alt}
 							sizes="(max-width: 768px) 50vw, 100vw"
@@ -32,8 +32,10 @@ export default function Campaign({ params, searchParams }: PageProps) {
 					</div>
 				))}
 			</div>
-			<div className="relative w-full | flex flex-col justify-center items-center">
-				<div className="fixed | w-1/4 h-1/2 | p-8 bg-white bg-opacity-60 rounded">
+
+			{/* Right Panel */}
+			<div className="col-span-2 | m-24 | flex flex-col justify-center items-center">
+				<div className="p-8 | bg-white bg-opacity-60 rounded">
 					<p>Title: IBM social campaign</p>
 					<p>Writer: JBM</p>
 					<p>Art Director: Some other guy</p>

@@ -1,10 +1,5 @@
 import { StaticImageData } from "next/image";
 
-import campaign_0_image_1 from "../../public/body-of-work/campaign_example_0/MH2021-28061_Gaming Q4 email hdr_580x320.png";
-import campaign_0_image_2 from "../../public/body-of-work/campaign_example_0/MH2021.26496 Q3 Gaming Webinar Email Header_1.jpg";
-import campaign_0_image_3 from "../../public/body-of-work/campaign_example_0/MH2021.26496 Q3 Gaming Webinar Email Header_2.jpg";
-import campaign_0_image_4 from "../../public/body-of-work/campaign_example_0/MH2021.26496 Q3 Gaming Webinar Email Header_3.jpg";
-
 import campaign_1_image_1 from "../../public/body-of-work/campaign_example_1/e001.png";
 import campaign_1_image_2 from "../../public/body-of-work/campaign_example_1/e002.jpg";
 import campaign_1_image_3 from "../../public/body-of-work/campaign_example_1/e003.png";
@@ -63,31 +58,159 @@ import campaign_12_image_1 from "../../public/body-of-work/campaign_example_12/e
 import campaign_12_image_2 from "../../public/body-of-work/campaign_example_12/e045.jpg";
 import campaign_12_image_3 from "../../public/body-of-work/campaign_example_12/e046.jpg";
 
-// Store in variable
-export const campaign000: Array<ImageCollection> = [
+import img_001_1 from "../../public/body-of-work/001-sample/MH2021-28061_Gaming Q4 email hdr_580x320.png";
+import img_001_2 from "../../public/body-of-work/001-sample/MH2021.26496 Q3 Gaming Webinar Email Header_1.jpg";
+import img_001_3 from "../../public/body-of-work/001-sample/MH2021.26496 Q3 Gaming Webinar Email Header_2.jpg";
+import img_001_4 from "../../public/body-of-work/001-sample/MH2021.26496 Q3 Gaming Webinar Email Header_3.jpg";
+
+const imgSet_001: Array<ImageCollection> = [
 	{
-		id: 1,
-		src: campaign_0_image_1,
-		alt: "Campaign 0 Example 1",
+		id: 1001,
+		src: img_001_1,
+		alt: "Gaming webinar 1",
 	},
 	{
-		id: 2,
-		src: campaign_0_image_2,
-		alt: "Campaign 0 Example 2",
+		id: 1002,
+		src: img_001_2,
+		alt: "Gaming Webinar 2",
 	},
 	{
-		id: 3,
-		src: campaign_0_image_3,
-		alt: "Campaign 0 Example 3",
-	},
-	{
-		id: 4,
-		src: campaign_0_image_4,
-		alt: "Campaign 0 Example 4",
+		id: 1003,
+		src: img_001_3,
+		alt: "Gaming Webinar 3",
 	},
 ];
 
-export const campaign001: Array<ImageCollection> = [
+import img_002_1 from "../../public/body-of-work/002-direct-mail/BTO+Angle+2.jpg";
+import img_002_2 from "../../public/body-of-work/002-direct-mail/Fortinet+Swag+Bag_700.png";
+import img_002_3 from "../../public/body-of-work/002-direct-mail/LH2020.20873B+Fortinet+SWAG+Bag+-+Insert_700.jpg";
+import img_002_4 from "../../public/body-of-work/002-direct-mail/LH2021.24145C+Apple+Academy+Direct+Mail+Kit_700.jpg";
+
+const imgSet_002: Array<ImageCollection> = [
+	{
+		id: 2001,
+		src: img_002_1,
+		alt: "Direct mail kit",
+	},
+	{
+		id: 2002,
+		src: img_002_2,
+		alt: "Swag bag",
+	},
+	{
+		id: 2003,
+		src: img_002_3,
+		alt: "Swag bag insert",
+	},
+	{
+		id: 2004,
+		src: img_002_4,
+		alt: "Apple Academy Direct Mail Kit",
+	},
+];
+
+import img_003_1 from "../../public/body-of-work/003-social-media/CVL+Q3+Traffic+GD_600.jpg";
+import img_003_2 from "../../public/body-of-work/003-social-media/CVL+Q3+Traffic+IG_600.jpg";
+import img_003_3 from "../../public/body-of-work/003-social-media/CVL+Q3+Traffic+LI.jpg";
+import img_003_4 from "../../public/body-of-work/003-social-media/J-MS-24794+PLG+Social+FB.jpg";
+import img_003_5 from "../../public/body-of-work/003-social-media/J-MS-24794+PLG+Social+LI.jpg";
+import img_003_6 from "../../public/body-of-work/003-social-media/social-media-1.jpg";
+
+const imgSet_003: Array<ImageCollection> = [
+	{
+		id: 3001,
+		src: img_003_1,
+		alt: "Traffic GD",
+	},
+	{
+		id: 3002,
+		src: img_003_2,
+		alt: "Traffic IG",
+	},
+	{
+		id: 3003,
+		src: img_003_3,
+		alt: "Traffic LI",
+	},
+	{
+		id: 3004,
+		src: img_003_4,
+		alt: "FB",
+	},
+	{
+		id: 3005,
+		src: img_003_5,
+		alt: "LI",
+	},
+	{
+		id: 3006,
+		src: img_003_6,
+		alt: "Social media kit",
+	},
+];
+
+import img_004_1 from "../../public/body-of-work/004-sales-sheets/LH2021.25148_Citrix_TTU_One-Pager.jpg";
+import img_004_2 from "../../public/body-of-work/004-sales-sheets/LH2021.25763+IM+Gaming+Sales+Sheet.jpg";
+
+const imgSet_004: Array<ImageCollection> = [
+	{
+		id: 4001,
+		src: img_004_1,
+		alt: "One-pager",
+	},
+	{
+		id: 4002,
+		src: img_004_2,
+		alt: "Sales sheet",
+	},
+];
+
+import img_005_1 from "../../public/body-of-work/005-web/CS2021-23742_IoT_COE-Launch_CVENT-Reg-Hdr.jpg";
+import img_005_2 from "../../public/body-of-work/005-web/SW+Banner+2_600x200.png";
+import img_005_3 from "../../public/body-of-work/005-web/transformation+email+header_600x250.png";
+
+const imgSet_005: Array<ImageCollection> = [
+	{
+		id: 5001,
+		src: img_005_1,
+		alt: "IoT COE launch",
+	},
+	{
+		id: 5002,
+		src: img_005_2,
+		alt: "SW Banner",
+	},
+	{
+		id: 5003,
+		src: img_005_3,
+		alt: "Transformation email header",
+	},
+];
+
+import img_006_1 from "../../public/body-of-work/006-misc/TI+Tradeshow_2018.png";
+import img_006_2 from "../../public/body-of-work/006-misc/TKO+1.png";
+import img_006_3 from "../../public/body-of-work/006-misc/TKO+5.png";
+
+const imgSet_006: Array<ImageCollection> = [
+	{
+		id: 6001,
+		src: img_006_1,
+		alt: "Tradeshow 2018 1",
+	},
+	{
+		id: 6002,
+		src: img_006_2,
+		alt: "Tradeshow 2018 2",
+	},
+	{
+		id: 6003,
+		src: img_006_3,
+		alt: "Tradeshow 2018 3",
+	},
+];
+
+// Store in variable
+const campaign001: Array<ImageCollection> = [
 	{
 		id: 101,
 		src: campaign_1_image_1,
@@ -110,7 +233,7 @@ export const campaign001: Array<ImageCollection> = [
 	},
 ];
 
-export const campaign002: Array<ImageCollection> = [
+const campaign002: Array<ImageCollection> = [
 	{
 		id: 201,
 		src: campaign_2_image_1,
@@ -138,7 +261,7 @@ export const campaign002: Array<ImageCollection> = [
 	},
 ];
 
-export const campaign003: Array<ImageCollection> = [
+const campaign003: Array<ImageCollection> = [
 	{
 		id: 301,
 		src: campaign_3_image_1,
@@ -161,7 +284,7 @@ export const campaign003: Array<ImageCollection> = [
 	},
 ];
 
-export const campaign004: Array<ImageCollection> = [
+const campaign004: Array<ImageCollection> = [
 	{
 		id: 401,
 		src: campaign_4_image_1,
@@ -184,7 +307,7 @@ export const campaign004: Array<ImageCollection> = [
 	},
 ];
 
-export const campaign005: Array<ImageCollection> = [
+const campaign005: Array<ImageCollection> = [
 	{
 		id: 501,
 		src: campaign_5_image_1,
@@ -212,7 +335,7 @@ export const campaign005: Array<ImageCollection> = [
 	},
 ];
 
-export const campaign006: Array<ImageCollection> = [
+const campaign006: Array<ImageCollection> = [
 	{
 		id: 601,
 		src: campaign_6_image_1,
@@ -240,7 +363,7 @@ export const campaign006: Array<ImageCollection> = [
 	},
 ];
 
-export const campaign007: Array<ImageCollection> = [
+const campaign007: Array<ImageCollection> = [
 	{
 		id: 701,
 		src: campaign_7_image_1,
@@ -263,7 +386,7 @@ export const campaign007: Array<ImageCollection> = [
 	},
 ];
 
-export const campaign008: Array<ImageCollection> = [
+const campaign008: Array<ImageCollection> = [
 	{
 		id: 801,
 		src: campaign_8_image_1,
@@ -281,7 +404,7 @@ export const campaign008: Array<ImageCollection> = [
 	},
 ];
 
-export const campaign009: Array<ImageCollection> = [
+const campaign009: Array<ImageCollection> = [
 	{
 		id: 901,
 		src: campaign_9_image_1,
@@ -299,7 +422,7 @@ export const campaign009: Array<ImageCollection> = [
 	},
 ];
 
-export const campaign010: Array<ImageCollection> = [
+const campaign010: Array<ImageCollection> = [
 	{
 		id: 1001,
 		src: campaign_10_image_1,
@@ -317,7 +440,7 @@ export const campaign010: Array<ImageCollection> = [
 	},
 ];
 
-export const campaign011: Array<ImageCollection> = [
+const campaign011: Array<ImageCollection> = [
 	{
 		id: 1101,
 		src: campaign_11_image_1,
@@ -335,23 +458,23 @@ export const campaign011: Array<ImageCollection> = [
 	},
 ];
 
-// export const campaign012: Array<ImageCollection> = [
-// 	{
-// 		id: 1201,
-// 		src: campaign_12_image_1,
-// 		alt: "Campaign 12 Example 1",
-// 	},
-// 	{
-// 		id: 1202,
-// 		src: campaign_12_image_2,
-// 		alt: "Campaign 12 Example 2",
-// 	},
-// 	{
-// 		id: 1203,
-// 		src: campaign_12_image_3,
-// 		alt: "Campaign 12 Example 3",
-// 	},
-// ];
+const campaign012: Array<ImageCollection> = [
+	{
+		id: 1201,
+		src: campaign_12_image_1,
+		alt: "Campaign 12 Example 1",
+	},
+	{
+		id: 1202,
+		src: campaign_12_image_2,
+		alt: "Campaign 12 Example 2",
+	},
+	{
+		id: 1203,
+		src: campaign_12_image_3,
+		alt: "Campaign 12 Example 3",
+	},
+];
 
 export interface ImageCollection {
 	id: number;
@@ -360,18 +483,18 @@ export interface ImageCollection {
 }
 
 const campaigns: Array<ImageCollection[]> = [
-	campaign000,
+	imgSet_001,
+	imgSet_002,
+	imgSet_003,
+	imgSet_004,
+	imgSet_005,
+	imgSet_006,
 	campaign001,
 	campaign002,
 	campaign003,
 	campaign004,
 	campaign005,
 	campaign006,
-	campaign007,
-	campaign008,
-	campaign009,
-	campaign010,
-	campaign011,
 ];
 
 // function

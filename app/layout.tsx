@@ -1,13 +1,17 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Secular_One } from "next/font/google";
 import Image from "next/image";
 import bgImage from "../public/background.jpeg";
 
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
-const font = Open_Sans({ subsets: ["latin"] });
+// Nextjs Google Font Declaration for non-variable font Secular One
+const secularOne = Secular_One({
+	weight: "400",
+	preload: false,
+});
 
 // Metadata
 export const metadata: Metadata = {
@@ -18,11 +22,11 @@ export const metadata: Metadata = {
 // Root Layout
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en" className={`${font.className}`}>
+		<html lang="en" className={`${secularOne.className}`}>
 			<body className="relative w-screen supports[height:100cqh]:h-[100cqh] supports-[height:100svh]:h-[100svh] | flex justify-center items-center">
 				{/* Background Image  */}
 				<Image
-					className="absolute inset-0 pointer-events-none -z-50"
+					className="absolute inset-0 -z-50 | pointer-events-none | grayscale brightness-110"
 					src={bgImage}
 					alt="Background image"
 					fill={true}

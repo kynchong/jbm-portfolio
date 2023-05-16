@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footer() {
 	return (
-		<div className="p-2 md:p-4 lg:p-8 w-full | flex flex-row flex-wrap justify-between items-center">
+		<div className="p-0 md:p-2 lg:p-4 xl:p-6 w-full | flex flex-row flex-wrap justify-between items-center">
 			{/* Copyright */}
 			<p className="font-thin text-xs md:text-sm xl:text-base">© 2023 Jonathan Moore</p>
 

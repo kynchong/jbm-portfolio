@@ -7,7 +7,8 @@ export default function Home() {
 	const campaigns = getImages();
 
 	return (
-		<section className="w-full h-full | flex flex-row flex-wrap justify-center items-center">
+		<section className="px-0 md:px-4 lg:px-8 xl:px-10 | w-full h-full | flex flex-row flex-wrap justify-center items-center">
+			{/* Gallery tiles */}
 			{Object.values(campaigns).map((campaign, index) => (
 				<Link
 					key={index}
