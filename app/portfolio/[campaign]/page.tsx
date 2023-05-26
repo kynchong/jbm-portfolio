@@ -1,3 +1,5 @@
+"use client";
+
 import getImages, { ImageCollection } from "../../lib/getImages";
 import Image from "next/image";
 
@@ -16,11 +18,14 @@ export default function Campaign({ params, searchParams }: PageProps) {
 	};
 
 	return (
-		<section className="w-full h-full | grid grid-cols-5 | overflow-hidden">
+		<section className="w-full h-screen | grid grid-cols-5 | overflow-hidden">
+			<button onClick={() => window.history.back()} className="fixed top-10 left-10">
+				⬅︎ Back
+			</button>
 			{/* Left Panel */}
-			<div className="col-span-3 h-full | overflow-y-scroll">
+			<div className="col-span-3 h-full snap-y snap-mandatory | overflow-y-scroll">
 				{campaignAssets.map((asset: ImageCollection) => (
-					<div key={asset.id} className="w-full h-full | flex flex-col justify-center items-center">
+					<div key={asset.id} className="w-full h-full snap-center | flex flex-col justify-center items-center">
 						<Image
 							className="w-full h-full p-8 object-contain"
 							src={asset.src}
@@ -35,16 +40,15 @@ export default function Campaign({ params, searchParams }: PageProps) {
 
 			{/* Right Panel */}
 			<div className="col-span-2 | m-24 | flex flex-col justify-center items-center">
-				<div className="p-8 | bg-white bg-opacity-60 rounded">
+				<div className="p-8">
 					<p>Title: IBM social campaign</p>
 					<p>Writer: JBM</p>
 					<p>Art Director: Some other guy</p>
 					<p>Creative Director: Don Draper</p>
 					<br />
 					<p>
-						Description: This campaign was this and this and ran here for a while. It did great and looks
-						great and you can tell that by looking at it. This campaign was this and this and ran here for a
-						while. it did great and looks great and you can tell that by looking at it.
+						Description: This campaign was this and this and ran here for a while. It did great and looks great and you can tell that by looking at it. This campaign was this and this and
+						ran here for a while. it did great and looks great and you can tell that by looking at it.
 					</p>
 				</div>
 			</div>

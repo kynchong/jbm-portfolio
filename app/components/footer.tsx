@@ -4,23 +4,23 @@ import Image from "next/image";
 
 export default function Footer() {
 	return (
-		<div className="p-0 md:p-2 lg:p-4 xl:p-6 w-full | flex flex-row flex-wrap justify-between items-center">
+		<footer className="fixed z-50 bottom-0 right-0 | p-2 flex flex-row justify-center items-center">
 			{/* Copyright */}
-			<p className="font-thin text-xs md:text-sm xl:text-base">© 2023 Jonathan Moore</p>
+			<p className="font-thin text-xs md:text-sm xl:text-base">© 2023 D. Whitman</p>
 
 			{/* Links */}
 			<ul className="flex flex-row justify-end | font-thin">
 				<li className="ml-4">
-					<a href="JBM4HIRE@gmail.com">
+					<a href="dondraper@madman.com">
 						<Image src={emailIcon} alt="Email" width={24} />
 					</a>
 				</li>
 				<li className="ml-4">
-					<a href="https://www.linkedin.com/in/jonathanbrucemoore/">
+					<a href="https://www.linkedin.com/in/dickwhitman/">
 						<Image src={linkedinIcon} alt="LinkedIn" width={24} />
 					</a>
 				</li>
 			</ul>
-		</div>
+		</footer>
 	);
 }
