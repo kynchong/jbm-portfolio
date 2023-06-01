@@ -6,7 +6,7 @@ export default function Footer() {
 	return (
 		<footer className="fixed z-50 bottom-0 right-0 | p-2 flex flex-row justify-center items-center">
 			{/* Copyright */}
-			<p className="font-thin text-xs md:text-sm xl:text-base">© 1965 D. Whitman</p>
+			<p className="font-thin text-xs md:text-sm xl:text-base">©2023 Jonathan Bruce Moore</p>
 
 			{/* Links */}
 			<ul className="flex flex-row justify-end | font-thin">

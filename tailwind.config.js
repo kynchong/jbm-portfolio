@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [
-		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
-		"./components/**/*.{js,ts,jsx,tsx,mdx}",
-		"./app/**/*.{js,ts,jsx,tsx,mdx}",
-	],
+	content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
 	theme: {
 		extend: {
 			backgroundImage: {
@@ -14,9 +10,9 @@ module.exports = {
 			colors: {
 				primary: "#3d63a9",
 				secondary: "#aac5f8",
-				text: "#2b3445",
+				text: "#000",
 				accent: "#739ce7",
-				background: "#d4e3fe",
+				background: "#fff",
 			},
 			dropShadow: {
 				"3d-1": [

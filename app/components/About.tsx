@@ -26,7 +26,7 @@ export default function About() {
 			<div className="relative w-2/3 h-2/3">
 				<Image className="object-contain" fill={true} src={img} alt="Ang" />
 				<Callout x="0" y="0" msg="This is a test of the emergency broadcast system." />
-				<Callout x="100px" y="-100px" msg="Another message." />
+				<Callout x="100px" y="200px" msg="Another message." />
 			</div>
 		</section>
 	);

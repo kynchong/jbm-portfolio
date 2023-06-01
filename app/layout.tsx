@@ -1,9 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
-
-// Nextjs Google Font Declaration for non-variable font Secular One
-const quicksand = Quicksand({ subsets: ["latin"] });
+import { bodyFont } from "./utils/fonts";
 
 // Metadata
 export const metadata: Metadata = {
@@ -15,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body className={`${quicksand.className} font-light bg-background text-text`}>{children}</body>
+			<body className={`${bodyFont.className} font-light bg-background text-text`}>{children}</body>
 		</html>
 	);
 }

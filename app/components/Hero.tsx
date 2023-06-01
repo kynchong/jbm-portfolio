@@ -1,28 +1,29 @@
-import { Secular_One } from "next/font/google";
+import { headingFont } from "../utils/fonts";
 
-const secular_one = Secular_One({ weight: "400", preload: false });
+const tagline = [
+	{ tag: "DO", color: "hover:text-blue-500" },
+	{ tag: "THE", color: "hover:text-orange-500" },
+	{ tag: "WRITE", color: "hover:text-purple-500" },
+	{ tag: "THING", color: "hover:text-red-500" },
+];
+
+type taglineProps = {
+	tag: string;
+	color: string;
+};
+
+const getTagline = ({ tag, color }: taglineProps) => {
+	return (
+		<div className="overflow-hidden">
+			<p className={`${color} w-min`}>{tag}</p>
+		</div>
+	);
+};
 
 export default function Hero() {
 	return (
 		<section className="w-full h-full | flex flex-col justify-center items-center | overflow-hidden">
-			<div className={`${secular_one.className} relative text-[20vmin] leading-none cursor-default`}>
-				<div className="group w-max">
-					<span className="">DO</span>
-					<div className="fixed inset-0 -z-50 pointer-events-none group-hover:bg-red-500"></div>
-				</div>
-				<div className="group w-max">
-					<span className="">THE</span>
-					<div className="fixed inset-0 -z-50 pointer-events-none group-hover:bg-green-500"></div>
-				</div>
-				<div className="group w-max">
-					<span className="">WRITE</span>
-					<div className="fixed inset-0 -z-50 pointer-events-none group-hover:bg-blue-500"></div>
-				</div>
-				<div className="group w-max">
-					<span className="">THING</span>
-					<div className="fixed inset-0 -z-50 pointer-events-none group-hover:bg-purple-500"></div>
-				</div>
-			</div>
+			<div className={`${headingFont.className} relative text-[20vmin] leading-none cursor-default`}>{tagline.map((tagline) => getTagline(tagline))}</div>
 			<div className="absolute bottom-10 left-1/2 text-4xl">⬇︎</div>
 		</section>
 	);
