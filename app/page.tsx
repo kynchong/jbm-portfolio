@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Hero from "./components/Hero";
-import Portfolio from "./components/Portfolio";
+import Work from "./components/Work";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
@@ -15,67 +15,71 @@ export default function Home() {
 	// enumeration
 	const sections = {
 		hero: "hero",
-		portfolio: "portfolio",
+		work: "work",
 		about: "about",
 		contact: "contact",
 	};
 
 	// references to of the page
-	const heroRef = useRef<HTMLDivElement | null>(null);
-	const portfolioRef = useRef<HTMLDivElement | null>(null);
-	const aboutRef = useRef<HTMLDivElement | null>(null);
-	const contactRef = useRef<HTMLDivElement | null>(null);
+	const refs = {
+		hero: useRef<HTMLDivElement | null>(null),
+		work: useRef<HTMLDivElement | null>(null),
+		about: useRef<HTMLDivElement | null>(null),
+		contact: useRef<HTMLDivElement | null>(null),
+	};
+
+	const views = {
+		hero: useInView(refs.hero, { amount: 0.5 }),
+		work: useInView(refs.work, { amount: 0.5 }),
+		about: useInView(refs.about, { amount: 0.5 }),
+		contact: useInView(refs.contact, { amount: 0.5 }),
+	};
 
 	const [currentRef, setCurrentRef] = useState<string>(sections.hero);
-
-	// useInView hook to determine which section is currently in view
-	const heroInView = useInView(heroRef, { amount: 0.5 });
-	const portfolioInView = useInView(portfolioRef, { amount: 0.5 });
-	const aboutInView = useInView(aboutRef, { amount: 0.5 });
-	const contactInView = useInView(contactRef, { amount: 0.5 });
+	const [targetRef, setTargetRef] = useState<string>(sections.hero);
 
 	// triggers changes when user scrolls
 	useEffect(() => {
-		if (heroInView) {
+		if (views.hero) {
 			setCurrentRef(sections.hero);
-		} else if (portfolioInView) {
-			setCurrentRef(sections.portfolio);
-		} else if (aboutInView) {
+		} else if (views.work) {
+			setCurrentRef(sections.work);
+		} else if (views.about) {
 			setCurrentRef(sections.about);
-		} else if (contactInView) {
+		} else if (views.contact) {
 			setCurrentRef(sections.contact);
 		}
-	}, [heroInView, portfolioInView, aboutInView, contactInView]);
+	}, [views.hero, views.work, views.about, views.contact]);
 
 	// triggers changes when user clicks
 	useEffect(() => {
-		if (currentRef === sections.hero && !heroInView) {
-			heroRef.current?.scrollIntoView();
-		} else if (currentRef === sections.portfolio && !portfolioInView) {
-			portfolioRef.current?.scrollIntoView();
-		} else if (currentRef === sections.about && !aboutInView) {
-			aboutRef.current?.scrollIntoView();
-		} else if (currentRef === sections.contact && !contactInView) {
-			contactRef.current?.scrollIntoView();
+		if (targetRef === sections.hero && !views.hero) {
+			refs.hero.current?.scrollIntoView({ behavior: "smooth" });
+		} else if (targetRef === sections.work && !views.work) {
+			refs.work.current?.scrollIntoView({ behavior: "smooth" });
+		} else if (targetRef === sections.about && !views.about) {
+			refs.about.current?.scrollIntoView({ behavior: "smooth" });
+		} else if (targetRef === sections.contact && !views.contact) {
+			refs.contact.current?.scrollIntoView({ behavior: "smooth" });
 		}
-	}, [currentRef]);
+	}, [targetRef]);
 
 	return (
 		<main className="w-screen h-screen overflow-y-scroll snap-mandatory snap-y scroll-smooth">
 			{/* Header */}
-			<Header sections={sections} currentRef={currentRef} handleNavClick={setCurrentRef} />
+			<Header sections={sections} currentRef={currentRef} handleNavClick={setTargetRef} />
 
 			{/* Content */}
-			<div ref={heroRef} className="w-screen h-screen relative snap-always snap-start">
+			<div ref={refs.hero} className="w-screen h-screen relative snap-always snap-start">
 				<Hero />
 			</div>
-			<div ref={portfolioRef} className="w-screen h-screen relative snap-always snap-start">
-				<Portfolio />
+			<div ref={refs.work} className="w-screen h-screen relative snap-always snap-start">
+				<Work />
 			</div>
-			<div ref={aboutRef} className="w-screen h-screen relative snap-always snap-start">
+			<div ref={refs.about} className="w-screen h-screen relative snap-always snap-start">
 				<About />
 			</div>
-			<div ref={contactRef} className="w-screen h-screen relative snap-always snap-start">
+			<div ref={refs.contact} className="w-screen h-screen relative snap-always snap-start">
 				<Contact />
 			</div>
 

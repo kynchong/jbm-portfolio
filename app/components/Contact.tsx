@@ -4,9 +4,9 @@ import { headingFont } from "../utils/fonts";
 import { JsxElement } from "typescript";
 
 const contactData = [
-	{ id: 0, icon: "📞", text: "Call me at", data: <span className="whitespace-nowrap">(714)274-3077</span> },
-	{ id: 1, icon: "✉️", text: "Email me at", data: <a href="mailto:JBM4HIRE@gmail.com">JBM4HIRE@GMAIL.COM</a> },
-	{ id: 2, icon: "💻", text: "Find me on", data: <a href="https://www.linkedin.com/in/jonathanbrucemoore/">LINKEDIN</a> },
+	{ id: 0, icon: "📞", text: "Call me", data: <span className="whitespace-nowrap">(714)274-3077</span> },
+	{ id: 1, icon: "✉️", text: "Email me", data: <a href="mailto:JBM4HIRE@gmail.com">JBM4HIRE@gmail.com</a> },
+	{ id: 2, icon: "💻", text: "Stalk me", data: <a href="https://www.linkedin.com/in/jonathanbrucemoore/">LinkedIn</a> },
 ];
 
 type ContactCardProps = {
@@ -18,11 +18,11 @@ type ContactCardProps = {
 
 const ContactCard = ({ id, icon, text, data }: ContactCardProps) => {
 	return (
-		<li className="w-96 | flex flex-col justify-center items-center gap-8">
-			<div className="text-9xl">{icon}</div>
-			<div className="flex flex-col items-center">
-				<div className="text-left italic">{text}</div>
-				<div className="">{data}</div>
+		<li className="w-96 | flex flex-row justify-start items-center gap-8">
+			<div className="text-8xl">{icon}</div>
+			<div className="flex flex-col justify-center items-start">
+				<div className="text-left text-2xl">{text}</div>
+				<div className="whitespace-nowrap text-4xl font-black">{data}</div>
 			</div>
 		</li>
 	);
@@ -30,28 +30,10 @@ const ContactCard = ({ id, icon, text, data }: ContactCardProps) => {
 
 export default function Contact() {
 	return (
-		<section className="w-full h-full | flex flex-col justify-center items-center | gap-20">
-			{/* Heading  */}
-			<div className="text-center">
-				<p className={`${headingFont.className} | text-9xl`}>LET'S CHAT!</p>
-			</div>
-
-			{/* Profile Pic */}
-			<div className="relative w-80 h-80 rounded-full overflow-hidden">
-				<Image
-					className="relative block object-cover object-top"
-					fill={true}
-					sizes="25vw"
-					placeholder="blur"
-					blurDataURL={profilePic.blurDataURL}
-					src={profilePic}
-					alt="Jonathan Bruce Moore"
-				/>
-			</div>
-
+		<section className="w-full h-full | flex flex-col justify-center items-center">
 			{/* Contact Info */}
 			<div>
-				<ul className="flex flex-row flex-wrap justify-center items-center">
+				<ul className="flex flex-col flex-wrap justify-center items-start | gap-16">
 					{contactData.map((contact) => (
 						<ContactCard key={contact.id} {...contact} />
 					))}

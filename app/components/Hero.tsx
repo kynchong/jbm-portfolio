@@ -1,10 +1,10 @@
 import { headingFont } from "../utils/fonts";
 
 const tagline = [
-	{ tag: "DO", color: "hover:text-blue-500" },
-	{ tag: "THE", color: "hover:text-orange-500" },
-	{ tag: "WRITE", color: "hover:text-purple-500" },
-	{ tag: "THING", color: "hover:text-red-500" },
+	{ tag: "Do", color: "hover:text-[#56bce8]" }, // Leonardo
+	{ tag: "The", color: "hover:text-[#eaab3c]" }, // Michaelangelo
+	{ tag: "WRITE", color: "hover:text-[#a176ae]" }, // Donatello
+	{ tag: "Thing.", color: "hover:text-[#d75934]" }, // Raphael
 ];
 
 type taglineProps = {
@@ -14,17 +14,16 @@ type taglineProps = {
 
 const getTagline = ({ tag, color }: taglineProps) => {
 	return (
-		<div className="overflow-hidden">
-			<p className={`${color} w-min`}>{tag}</p>
-		</div>
+		<p key={tag} className={`${color} w-min`}>
+			{tag}
+		</p>
 	);
 };
 
 export default function Hero() {
 	return (
-		<section className="w-full h-full | flex flex-col justify-center items-center | overflow-hidden">
-			<div className={`${headingFont.className} relative text-[20vmin] leading-none cursor-default`}>{tagline.map((tagline) => getTagline(tagline))}</div>
-			<div className="absolute bottom-10 left-1/2 text-4xl">⬇︎</div>
+		<section className="p-8 w-full h-full | flex flex-col justify-center items-end | overflow-hidden">
+			<div className={`${headingFont.className} relative text-[20vmin] leading-none cursor-default | flex flex-col items-end`}>{tagline.map((tagline) => getTagline(tagline))}</div>
 		</section>
 	);
 }
