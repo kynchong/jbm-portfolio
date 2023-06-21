@@ -1,6 +1,7 @@
 "use client";
 
-import getImages, { ImageCollection } from "../../lib/getImages";
+import Link from "next/link";
+import getImages, { ImageCollection } from "../../utils/getImages";
 import Image from "next/image";
 
 type PageProps = {
@@ -18,10 +19,11 @@ export default function Campaign({ params, searchParams }: PageProps) {
 	};
 
 	return (
-		<section className="w-full h-screen | grid grid-cols-5 | overflow-hidden">
-			<button onClick={() => window.history.back()} className="fixed top-10 left-10">
+		<div className="w-full h-screen | grid grid-cols-5 | overflow-hidden">
+			<Link className="absolute p-2" href={"/#"} scroll={false}>
 				⬅︎ Back
-			</button>
+			</Link>
+
 			{/* Left Panel */}
 			<div className="col-span-3 h-full snap-y snap-mandatory | overflow-y-scroll">
 				{campaignAssets.map((asset: ImageCollection) => (
@@ -52,6 +54,6 @@ export default function Campaign({ params, searchParams }: PageProps) {
 					</p>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 }

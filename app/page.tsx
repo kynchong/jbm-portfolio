@@ -6,15 +6,15 @@ import { useEffect, useRef, useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import Hero from "./components/Hero";
-import Work from "./components/Work";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import Hero from "./hero/page";
+import Work from "./work/page";
+import About from "./about/page";
+import Contact from "./contact/page";
 
 export default function Home() {
 	// enumeration
 	const sections = {
-		hero: "hero",
+		hero: "home",
 		work: "work",
 		about: "about",
 		contact: "contact",
